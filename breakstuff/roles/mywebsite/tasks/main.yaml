@@ -1,0 +1,16 @@
+---
+
+- name: Copy html template 
+  become: true
+  become_user: root
+  template:
+    src: index.html.j2
+    dest: /var/www/html/index.html
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Restart Apache to get new stuff
+  service:
+    name: apache2
+    state: restarted

@@ -1,0 +1,8 @@
+---
+# Starter Playbook
+
+- hosts: webservers
+  become: yes
+  roles:
+    - apache
+    - mywebsite

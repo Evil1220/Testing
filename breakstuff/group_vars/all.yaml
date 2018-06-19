@@ -1,0 +1,5 @@
+---
+
+ansible_ssh_user: c
+TITLE_VAR: I am a title
+BODY_VAR: Hello W0rld!

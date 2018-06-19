@@ -1,0 +1,17 @@
+---
+
+- name: Install Apache on Ubuntu
+  become: true
+  become_user: root
+  apt:
+    name: apache2
+    state: latest
+    update_cache: true
+
+- name: Enable & Start Apache service
+  become: true
+  become_user: root
+  service:
+    name: apache2
+    state: restarted
+    enabled: true
